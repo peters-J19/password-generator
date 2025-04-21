@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <!-- 🔐 Site Identity -->
+    <title>PromptPass</title>
+    <meta name="description" content="Turn ideas into strong passwords with a prompt-based generator powered by AI." />
+
+    <!-- 💡 Optional Open Graph tags (for link sharing) -->
+    <meta property="og:title" content="PromptPass" />
+    <meta property="og:description" content="Turn ideas into strong passwords with a prompt-based generator powered by AI." />
+    <meta property="og:image" content="/preview.png" /> <!-- use a nice screenshot or banner -->
+    <meta property="og:type" content="website" />
   </head>
+
   <body>
     <div id="root"></div>
+
+    <video autoplay muted loop id="background-video">
+      <source src="/matrix.mp4" type="video/mp4" />
+    </video>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

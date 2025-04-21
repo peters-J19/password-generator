@@ -1,0 +1,55 @@
+.ai-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .ai-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #4b6cb7;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .password-box {
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: transparent !important;
+    color: white;
+    border-radius: 8px;
+    font-size: 3rem;
+    word-break: break-all;
+  }
+
+  .password-box span {
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-button {
+    margin-left: 20px;
+    background-color: #ccc !important;
+    color: #000 !important;
+  }
+
+  .btn-container {
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: -8px;
+  }
+
+  .sub-description {
+    font-size: 1rem;
+    font-weight: italic;
+    text-align: center;
+  }

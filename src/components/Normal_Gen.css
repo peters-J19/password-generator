@@ -1,0 +1,52 @@
+  .normal-container label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .normal-container input[type="number"] {
+    margin-left: 10px;
+    width: 40px;
+    font-size: 1.2rem;
+  }
+
+  .normal-container input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+  }
+  
+  .normal-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .password-box {
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: transparent !important;
+    color: white;
+    border-radius: 8px;
+    font-size: 3rem;
+    word-break: break-all;
+  }
+
+  .password-box span {
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-button {
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: #ccc !important;
+    color: #000 !important;
+  }
+
+  .btn-container {
+    text-align: center;
+  }

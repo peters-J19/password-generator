@@ -1,42 +1,73 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}
+
+input[type="text"],
+textarea,
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  height: 100%;
+}
+
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  position: relative;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.2; /* Adjust for visibility */
+  filter: contrast(1.2) brightness(0.7);
+  pointer-events: none; /* Don't block clicks */
+}
+
+.app-header {
   text-align: center;
+  padding: 30px 20px 10px;
+  z-index: 2;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.site-title {
+  font-size: 4rem;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.site-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* === PASSWORD GENERATION SECTION === */
+.password-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
