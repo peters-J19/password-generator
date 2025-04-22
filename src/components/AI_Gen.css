@@ -93,6 +93,10 @@
 }
 
 @media (max-width: 768px) {
+  .ai-container {
+    margin-top: -10px;
+  }
+
   .password-box {
     font-size: 1.2rem;
   }
