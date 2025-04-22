@@ -6,7 +6,7 @@
 
 .normal-container input[type="number"] {
   margin-left: 10px;
-  width: 40px;
+  width: 50px;
   font-size: 1.2rem;
 }
 
@@ -68,10 +68,6 @@
 @media (max-width: 768px) {
   .normal-container label {
     font-size: 1rem;
-  }
-
-  .normal-container input[type="number"] {
-    width: 50px;
   }
 
   .password-box {
