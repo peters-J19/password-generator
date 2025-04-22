@@ -1,5 +1,4 @@
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
   background: black;
@@ -17,11 +16,12 @@ button {
 }
 
 #root {
-  height: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .app-container {
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +76,45 @@ button {
   box-sizing: border-box;
 }
 
+.top-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.ad-left {
+  width: 400px;
+  margin-right: 50px;
+  min-height: 500px;
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.ad-right {
+  width: 400px;
+  margin-left: 50px;
+  min-height: 500px;
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.ad-bottom {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1600px;
+  height: 200px;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .app-container {
     padding: 25px;
@@ -112,5 +151,20 @@ button {
 
   .password-content {
     width: 100%;
+  }
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-left,
+  .ad-right {
+    display: none;
+  }
+
+  .ad-bottom {
+    height: 150px;
+    margin-top: 25px;
   }
 }
