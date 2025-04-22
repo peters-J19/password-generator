@@ -89,7 +89,7 @@ function AI_Gen({ setPassword, password, onSwitch }) {
         <button onClick={generateWithAI} disabled={loading || lockedOut}>
           {lockedOut ? "Limit Reached" : loading ? "Generating..." : "Generate with AI"}
         </button>
-        <button className="toggle-button" onClick={onSwitch}>Or Use Normal Password Generator</button>
+        <button className="ai-toggle-button" onClick={onSwitch}>Or Use Normal Password Generator</button>
       </div>
 
       {password && (
@@ -105,7 +105,7 @@ function AI_Gen({ setPassword, password, onSwitch }) {
             Copy
           </button>
 
-          {copied && <div className="copied-message">Password copied to clipboard!</div>}
+          {copied && <div className="ai-copied-message">Password copied to clipboard!</div>}
 
           <div className="password-strength">
             Password Strength:{' '}

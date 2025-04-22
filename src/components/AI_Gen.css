@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.toggle-button {
+.ai-toggle-button {
   margin-left: 20px;
   background-color: #ccc !important;
   color: #000 !important;
@@ -53,7 +53,7 @@
   transition: color 0.2s ease;
 }
 
-.copied-message {
+.ai-copied-message {
   margin-top: 10px;
   color: #4b6cb7 !important;
   font-weight: bold;
@@ -101,7 +101,7 @@
     font-size: 1.2rem;
   }
 
-  .copied-message {
+  .ai-copied-message {
     font-size: 0.85rem;
     color: #4b6cb7 !important;
   }
@@ -110,7 +110,8 @@
     font-size: 1rem;
   }
 
-  .toggle-button {
+  .ai-toggle-button {
+    margin-left: 0;
     font-size: 1rem;
   }
 
