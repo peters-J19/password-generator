@@ -1,52 +1,85 @@
+.normal-container label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.25rem;
+}
+
+.normal-container input[type="number"] {
+  margin-left: 10px;
+  width: 40px;
+  font-size: 1.2rem;
+}
+
+.normal-container input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.normal-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.password-box {
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+  background-color: transparent !important;
+  color: white;
+  border-radius: 8px;
+  font-size: 3rem;
+  word-break: break-word;
+}
+
+.password-box span {
+  transition: color 0.2s ease;
+}
+
+.toggle-button {
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: #ccc !important;
+  color: #000 !important;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.copied-message {
+  margin-top: 10px;
+  color: #4caf50 !important;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.password-strength {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
   .normal-container label {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .normal-container input[type="number"] {
-    margin-left: 10px;
-    width: 40px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
-  .normal-container input[type="checkbox"] {
-    transform: scale(1.5);
-    margin-right: 10px;
-  }
-  
-  .normal-container button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
-  }
-  
   .password-box {
-    margin-top: 20px;
-    text-align: center;
-    padding: 15px;
-    background-color: transparent !important;
-    color: white;
-    border-radius: 8px;
-    font-size: 3rem;
-    word-break: break-all;
+    font-size: 1.8rem;
   }
 
-  .password-box span {
-    transition: color 0.2s ease;
-  }
-  
-  .toggle-button {
-    margin-top: 30px;
-    margin-left: 20px;
-    background-color: #ccc !important;
-    color: #000 !important;
+  .copied-message {
+    font-size: 0.85rem;
+    color: #4caf50 !important;
   }
 
-  .btn-container {
-    text-align: center;
+  .password-strength {
+    font-size: 1rem;
   }
+}

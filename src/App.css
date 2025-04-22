@@ -38,9 +38,9 @@ button {
   min-height: 100vh;
   z-index: 0;
   object-fit: cover;
-  opacity: 0.2; /* Adjust for visibility */
+  opacity: 0.2;
   filter: contrast(1.2) brightness(0.7);
-  pointer-events: none; /* Don't block clicks */
+  pointer-events: none;
 }
 
 .app-header {
@@ -60,8 +60,6 @@ button {
   color: #ccc;
 }
 
-
-/* === PASSWORD GENERATION SECTION === */
 .password-content {
   width: 100%;
   max-width: 900px;
@@ -70,4 +68,43 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-header {
+    padding: 5px 20px 10px;
+    z-index: 2;
+  }
+
+  .site-title {
+    font-size: 3rem;
+  }
+
+  .site-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  textarea {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .password-box {
+    padding: 1rem;
+  }
+
+  .password-content {
+    width: 100%;
+  }
 }

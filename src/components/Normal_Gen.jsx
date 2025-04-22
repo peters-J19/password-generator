@@ -46,70 +46,61 @@ function Normal_Gen({ setPassword, password, onSwitch }) {
     if (/[a-z]/.test(password)) score++;
     if (/[0-9]/.test(password)) score++;
     if (/[^A-Za-z0-9]/.test(password)) score++;
-  
     if (score <= 2) return { label: 'Weak', color: 'red' };
-    if (score === 3 || score === 4) return { label: 'Moderate', color: 'orange' };
+    if (score <= 4) return { label: 'Moderate', color: 'orange' };
     return { label: 'Strong', color: 'green' };
   };
 
   return (
     <div className="normal-container">
-      <label style={{ fontSize: '1.25rem' }}>
+      <label>
         Length:
         <input
-            type="number"
-            value={length}
-            maxLength={2}
-            onChange={(e) => {
-                const value = e.target.value;
-                if (/^\d{0,2}$/.test(value)) {
-                    setLength(value);
-                }
-            }}
+          type="number"
+          value={length}
+          maxLength={2}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (/^\d{0,2}$/.test(value)) {
+              setLength(value);
+            }
+          }}
         />
       </label>
 
-      <label style={{ fontSize: '1.25rem' }}><input type="checkbox" checked={upper} onChange={() => setUpper(!upper)} /> Uppercase</label>
-      <label style={{ fontSize: '1.25rem' }}><input type="checkbox" checked={lower} onChange={() => setLower(!lower)} /> Lowercase</label>
-      <label style={{ fontSize: '1.25rem' }}><input type="checkbox" checked={numbers} onChange={() => setNumbers(!numbers)} /> Numbers</label>
-      <label style={{ fontSize: '1.25rem' }}><input type="checkbox" checked={symbols} onChange={() => setSymbols(!symbols)} /> Symbols</label>
-    
+      <label><input type="checkbox" checked={upper} onChange={() => setUpper(!upper)} /> Uppercase</label>
+      <label><input type="checkbox" checked={lower} onChange={() => setLower(!lower)} /> Lowercase</label>
+      <label><input type="checkbox" checked={numbers} onChange={() => setNumbers(!numbers)} /> Numbers</label>
+      <label><input type="checkbox" checked={symbols} onChange={() => setSymbols(!symbols)} /> Symbols</label>
+
       <div className="btn-container">
         <button onClick={generate}>Generate Password</button>
-
-        <button className="toggle-button" onClick={onSwitch}>
-            Or Use AI Custom Password
-        </button>
+        <button className="toggle-button" onClick={onSwitch}>Or Use AI Custom Password</button>
       </div>
 
       {password && (
         <div className="password-box">
-          <strong>{password}</strong>
-          <br />
+          <strong>{password}</strong><br />
           <button
             onClick={() => {
-                navigator.clipboard.writeText(password);
-                setCopied(true);
-                setTimeout(() => setCopied(false), 3000);
+              navigator.clipboard.writeText(password);
+              setCopied(true);
+              setTimeout(() => setCopied(false), 3000);
             }}
           >
             Copy
           </button>
-          {copied && (
-                <div style={{ marginTop: '20px', color: '#4caf50', fontWeight: 'bold', fontSize: '1rem' }}>
-                    Password copied to clipboard!
-                </div>
-          )}
 
-          <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '1.5rem' }}>
+          {copied && <div className="copied-message">Password copied to clipboard!</div>}
+
+          <div className="password-strength">
             Password Strength:{' '}
             <span style={{ color: getStrength(password).color }}>
-                {getStrength(password).label}
+              {getStrength(password).label}
             </span>
           </div>
         </div>
       )}
-
     </div>
   );
 }

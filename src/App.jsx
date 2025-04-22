@@ -6,7 +6,7 @@ import PaymentSuccess from './components/PaymentSuccess';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [mode, setMode] = useState('ai'); // 'ai' or 'classic'
+  const [mode, setMode] = useState('ai');
   const [password, setPassword] = useState('');
 
   return (
