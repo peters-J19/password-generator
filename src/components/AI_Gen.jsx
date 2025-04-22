@@ -120,7 +120,7 @@ function AI_Gen({ setPassword, password, onSwitch }) {
         <div className="locked-out-message">
           <p><strong>You've used all {promptCredits || 3} AI prompts.</strong></p>
           <p>Buy 20 more for just $1</p>
-          <a href="https://buy.stripe.com/test_eVag1h0fF2ig3xCeUU" target="_blank" rel="noopener noreferrer">
+          <a href="https://buy.stripe.com/28o017cYz8Baa8UcMM" target="_blank" rel="noopener noreferrer">
             Purchase More Prompts ($1)
           </a>
         </div>
