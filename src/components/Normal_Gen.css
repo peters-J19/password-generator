@@ -70,6 +70,10 @@
     font-size: 1rem;
   }
 
+  .normal-container input[type="number"] {
+    width: 50px;
+  }
+
   .password-box {
     font-size: 1.8rem;
   }
@@ -77,6 +81,10 @@
   .copied-message {
     font-size: 0.85rem;
     color: #4caf50 !important;
+  }
+
+  .toggle-button {
+    font-size: 1rem;
   }
 
   .password-strength {
